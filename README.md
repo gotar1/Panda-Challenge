@@ -1,17 +1,23 @@
-# Panda-Challenge
-## Option 2: PyCitySchools
+# Panda-PyCitySchools Challenge
+##  
 
 ![Education](Images/education.png)
 
-Well done! Having spent years analyzing financial records for big banks, you've finally scratched your idealistic itch and joined the education sector. In your latest role, you've become the Chief Data Scientist for your city's school district. In this capacity, you'll be helping the  school board and mayor make strategic decisions regarding future school budgets and priorities.
+## Background
 
-As a first task, you've been asked to analyze the district-wide standardized test results. You'll be given access to every student's math and reading scores, as well as various information on the schools they attend. Your responsibility is to aggregate the data to and showcase obvious trends in school performance.
+We will be helping a school board make strategic decisions regarding future school budgets and priorities.
 
-Your final report should include each of the following:
+by analyzing the district-wide standardized test results. Youhave access to every student's math and reading
+scores, as well as various information on the schools they attend. Using the pandas library and Jupyter Notebook. 
+We are going to aggregate the data to showcase obvious trends in school performance.
+
+## Analysis
+
+our final report include each of the following:
 
 ### District Summary
 
-* Create a high level snapshot (in table form) of the district's key metrics, including:
+* Created a high level snapshot (in table form) of the district's key metrics, including:
   * Total Schools
   * Total Students
   * Total Budget
@@ -21,9 +27,15 @@ Your final report should include each of the following:
   * % Passing Reading (The percentage of students that passed reading.)
   * % Overall Passing (The percentage of students that passed math **and** reading.)
 
+```text
+
+Total Schools  Total Students  Total Budget   Average Math Score  Average Reading Score  %Passing Math  %Passing Reading  %Over all Passing
+    15	          39,170       $24,649,428.00	   78.99	         81.88	             74.98 %	    85.81 %	     65.17 %
+```
+
 ### School Summary
 
-* Create an overview table that summarizes key metrics about each school, including:
+* Created an overview table that summarizes key metrics about each school, including:
   * School Name
   * School Type
   * Total Students
@@ -35,9 +47,16 @@ Your final report should include each of the following:
   * % Passing Reading (The percentage of students that passed reading.)
   * % Overall Passing (The percentage of students that passed math **and** reading.)
 
+```
+School Name	    School Type	 Total Students	Total School Budget  Per Student Budget	Average Math Score  Average Reading Score  %Passing Math  %Passing Reading  %Overall Passing
+Bailey High School	District    4976	  $3,124,928.00	     $628.00	          77.05	             81.03	            66.68 %	   81.93 %	     54.64 %
+Cabrera High School	Charter	    1858	  $1,081,356.00	     $582.00	          83.06	             83.98	            94.13 %	   97.04 %	     91.33 %
+Figueroa High School	District	
+```
+
 ### Top Performing Schools (By % Overall Passing)
 
-* Create a table that highlights the top 5 performing schools based on % Overall Passing. Include:
+* Created a table that highlights the top 5 performing schools based on % Overall Passing. Include:
   * School Name
   * School Type
   * Total Students
@@ -51,11 +70,12 @@ Your final report should include each of the following:
 
 ### Bottom Performing Schools (By % Overall Passing)
 
-* Create a table that highlights the bottom 5 performing schools based on % Overall Passing. Include all of the same metrics as above.
+* Create a table that highlights the bottom 5 performing schools based on % Overall Passing. 
+Include all of the same metrics as above.
 
 ### Math Scores by Grade\*\*
 
-* Create a table that lists the average Math Score for students of each grade level (9th, 10th, 11th, 12th) at each school.
+* Created a table that lists the average Math Score for students of each grade level (9th, 10th, 11th, 12th) at each school.
 
 ### Reading Scores by Grade
 
@@ -70,33 +90,40 @@ Your final report should include each of the following:
   * % Passing Reading (The percentage of students that passed reading.)
   * % Overall Passing (The percentage of students that passed math **and** reading.)
 
+#### <a id="school-spending"></a>School Spending
+
+![school spending](../Images/spending.png)
+
 ### Scores by School Size
 
 * Repeat the above breakdown, but this time group schools based on a reasonable approximation of school size (Small, Medium, Large).
+
+#### <a id="school-size"></a>School Size
+
+![school size](../Images/size.png)
 
 ### Scores by School Type
 
 * Repeat the above breakdown, but this time group schools based on school type (Charter vs. District).
 
-As final considerations:
+#### <a id="school-type"></a>School Type
 
-* Use the pandas library and Jupyter Notebook.
-* You must submit a link to your Jupyter Notebook with the viewable Data Frames.
-* You must include a written description of at least two observable trends based on the data.
-* See [Example Solution](PyCitySchools/PyCitySchools_starter.ipynb) for a reference on the expected format.
+![school type](../Images/type.png)
 
-## Hints and Considerations
+## Conclusion
 
-* These are challenging activities for a number of reasons. For one, these activities will require you to analyze thousands of records. Hacking through the data to look for obvious trends in Excel is just not a feasible option. The size of the data may seem daunting, but pandas will allow you to efficiently parse through it.
+Looking at the the plots created after each analysis, it is obvious that:
 
-* Second, these activities will also challenge you by requiring you to learn on your feet. Don't fool yourself into thinking: "I need to study pandas more closely before diving in." Get the basic gist of the library and then _immediately_ get to work. When facing a daunting task, it's easy to think: "I'm just not ready to tackle it yet." But that's the surest way to never succeed. Learning to program requires one to constantly tinker, experiment, and learn on the fly. You are doing exactly the _right_ thing, if you find yourself constantly practicing Google-Fu and diving into documentation. There is just no way (or reason) to try and memorize it all. Online references are available for you to use when you need them. So use them!
+ * Spending more money per-student did not improve grades at all. Schools with smaller budgets (585 per student)
+ dramatically out-performed schools with higher spending (645-675 per student) on overall passing percentage (90% passing vs 53%).
 
-* Take each of these tasks one at a time. Begin your work, answering the basic questions: "How do I import the data?" "How do I convert the data into a DataFrame?" "How do I build the first table?" Don't get intimidated by the number of asks. Many of them are repetitive in nature with just a few tweaks. Be persistent and creative!
+ * Small class size means better grades and that is why smaller and medium sized schools dramatically 
+out-performed large sized schools on overall passing percentage (90% passing vs 58%).
 
-* Expect these exercises to take time! Don't get discouraged if you find yourself spending  hours initially with little progress. Force yourself to deal with the discomfort of not knowing and forge ahead. Consider these hours an investment in your future!
+ * Charter schools grade-average way better than District or public schools, this is very clear when 
+we look at top five performing schools"all Charters" vs bottom five ones"all District".
 
-* As always, feel encouraged to work in groups and get help from your TAs and Instructor. Just remember, true success comes from mastery and _not_ a completed homework assignment. So challenge yourself to truly succeed!
+ * Charter schools kids out perform their District counterpart by 37% points when it comes to the 
+overall percentage of passing both math and reading (90% vs 53%).
 
-### Copyright
 
-Trilogy Education Services © 2019. All Rights Reserved.
